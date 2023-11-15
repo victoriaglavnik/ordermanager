@@ -1,5 +1,3 @@
-var http = require('OrderManager');
-
 class order {
     constructor(date, product) {
         this.date = date;
