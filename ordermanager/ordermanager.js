@@ -12,19 +12,17 @@ class item {
         this.quantity = quantity;
     }
 }
-const allorders = [
-    new order('2.2.23', 'coffee'),
-    new item('vanilla coffee', '12', 'medium', '1'),
-    new order('2.15.23', 'tea'),
-    new item('chi tea', '4', 'small', '1'),
-];
+ let getOrders = [
+     {
+         "order": new order("2.2.23", "coffee"),
+         "item1": new item("vanilla coffee", "12", "medium", "1"),
+     },
+     {
+         "order": new order("2.15.23", "tea"),
+         "item2": new item("chi tea", "4", "small", "1"),
+     },
+ ];
 
-exports.getRandomorder = () => {
-    return allorders[Math.floor(Math.random() * allorders.length)];
-}
-exports.getRandomitem = () => {
-    return allorders[Math.floor(Math.random() * allorders.length)];
-}
-exports.allorders = allorders;
+module.exports = {getOrders}
 
 
